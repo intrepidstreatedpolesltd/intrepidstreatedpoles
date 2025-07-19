@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery – Intrepids Treated Poles Ventures Ltd</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    header img {
+      width: 150px;
+      max-width: 100%;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d0ffd0;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1s ease;
+    }
+
+    h2 {
+      color: #2e7d32;
+      font-size: 28px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      color: #2e7d32;
+      font-size: 24px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery-item {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+
+    .completed-projects-images,
+    .ongoing-projects-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .completed-projects-images img {
+      width: 40%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .ongoing-projects-images img {
+      width: 30%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      section {
+        padding: 20px 10px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+      }
+
+      .completed-projects-images img,
+      .ongoing-projects-images img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Intrepids Treated Poles Ventures Ltd</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About-Us</a>
+      <a href="ourservices.html">Our-Services</a>
+      <a href="ourproduct.html">Our-Product</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faqs.html">FAQ'S</a>
+    </nav>
+  </header>
+
+  <section id="gallery">
+    <h2 class="completed-projects">COMPLETED PROJECTS</h2>
+    <div class="completed-projects-images">
+      <img src="gallery/c1.jpg" alt="Completed Project 1">
+      <img src="gallery/c2.jpg" alt="Completed Project 2">
+      <img src="gallery/c3.jpg" alt="Completed Project 3">
+      <img src="gallery/c4.jpg" alt="Completed Project 4">
+      <img src="gallery/c5.jpg" alt="Completed Project 5">
+      <img src="gallery/c6.jpg" alt="Completed Project 6">
+      <img src="gallery/c7.jpg" alt="Completed Project 7">
+      <img src="gallery/c8.jpg" alt="Completed Project 8">
+      <img src="gallery/c9.jpg" alt="Completed Project 9">
+      <img src="gallery/c10.jpg" alt="Completed Project 10">
+      <img src="gallery/c11.jpg" alt="Completed Project 11">
+    </div>
+
+    <h3 class="completed-projects">ONGOING PROJECTS</h3>
+    <div class="ongoing-projects-images">
+      <img src="gallery/n1.jpg" alt="Ongoing Project 1">
+      <img src="gallery/n2.jpg" alt="Ongoing Project 2">
+      <img src="gallery/n3.jpg" alt="Ongoing Project 3">
+      <img src="gallery/n4.jpg" alt="Ongoing Project 4">
+      <img src="gallery/n5.jpg" alt="Ongoing Project 5">
+      <img src="gallery/n6.jpg" alt="Ongoing Project 6">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Intrepids Treated Poles Ventures Ltd. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

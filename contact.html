@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Intrepids Treated Poles  Ltd</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    header img {
+      width: 150px;
+      max-width: 100%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d0ffd0;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 0.7s ease;
+    }
+
+    h2 {
+      color: #2e7d32;
+      font-size: 28px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #1b5e20;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      section {
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Intrepids Treated Poles Ltd</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About-Us</a>
+      <a href="ourservices.html">Our-Services</a>
+      <a href="ourproduct.html">Our-Product</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faqs.html">FAQ'S</a>
+    </nav>
+  </header>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Fill in the form below and we’ll get back to you shortly.</p>
+
+    <form id="contactForm" action="https://formspree.io/f/xovwzozj" method="POST" style="max-width: 500px; margin: 0 auto;">
+      <input type="hidden" name="_next" value="https://intrepids-plantation.github.io/thankyou.html">
+
+      <label for="name">Your Name</label><br>
+      <input type="text" id="name" name="name" required minlength="3" placeholder="Enter your name"><br><br>
+
+      <label for="email">Your Email</label><br>
+      <input type="email" id="email" name="email" required placeholder="e.g. example@gmail.com"><br><br>
+
+      <label for="message">Your Message</label><br>
+      <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Type your message here"></textarea><br><br>
+
+      <button type="submit" class="btn">📩 Send Message</button>
+    </form>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" style="display:none; text-align:center; margin-top:20px;">
+      <div style="
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #2e7d32;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+      "></div>
+      <p>Sending...</p>
+    </div>
+
+    <p style="margin-top: 30px; text-align: center;">
+      <strong>Email:</strong> intrepidstreatedpolesltd@gmail.com<br>
+      <strong>Phone:</strong> +254 722271791 / +254 111801406
+    </p>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <!-- WhatsApp Buttons -->
+      <a href="https://wa.me/254722271791" target="_blank" class="btn" style="background-color: #25D366; margin-bottom: 10px;">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="width:20px; vertical-align: middle; margin-right: 8px;">
+        Chat on WhatsApp (0722)
+      </a>
+      <a href="https://wa.me/254111801406" target="_blank" class="btn" style="background-color: #25D366; margin-left: 10px;">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="width:20px; vertical-align: middle; margin-right: 8px;">
+        Chat on WhatsApp (1118)
+      </a>
+
+      <!-- Call Buttons -->
+      <br><br>
+      <a href="tel:+254722271791" class="btn" style="background-color: #007bff;">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone" style="width:18px; vertical-align: middle; margin-right: 8px;">
+        Call +254 722271791
+      </a>
+      <a href="tel:+254111801406" class="btn" style="background-color: #007bff; margin-left: 10px;">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone" style="width:18px; vertical-align: middle; margin-right: 8px;">
+        Call +254 111801406
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Intrepids Treated Poles Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      document.getElementById("loadingSpinner").style.display = "block";
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const whatsappText = `Hello Intrepids Treated Poles Ltd,%0AMy name is *${name}* (%0AEmail: ${email})%0A%0A${message}`;
+      const whatsappURL = "https://wa.me/254722271791?text=" + whatsappText;
+
+      setTimeout(() => {
+        window.open(whatsappURL, "_blank");
+      }, 500);
+    });
+  </script>
+</body>
+</html>
