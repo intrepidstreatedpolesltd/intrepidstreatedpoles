@@ -109,48 +109,67 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
+   .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
 
-      h1 {
-        font-size: 20px;
-      }
+  .header-logo img {
+    width: 150px;
+    height: auto;
+  }
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+}
 
-      section {
-        padding: 20px 10px;
-      }
 
-      .image img,
-      .image-gallery-3rows img {
-        width: 80%;
-      }
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      align-items: center;
     }
+
+    .header-logo img {
+      width: 100px;
+    }
+
+    .header-title {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .image img,
+    .image-gallery-3rows img {
+      width: 80%;
+    }
+  }
   </style>
 </head>
 <body>
  <!-- Header -->
-  <header>
-    <div class="header-content">
-      <div class="header-logo">
-        <img src="logo.png" alt="Logo" />
-      </div>
-      <div class="header-title">Welcome to Intrepids Treated Poles Ltd</div>
-      <div class="header-empty"></div>
+ <header>
+  <div class="header-content">
+    <div class="header-logo">
+      <img src="logo.png" alt="Logo" />
     </div>
+    <div class="header-title">Welcome to Intrepids Treated Poles Ltd</div>
+  </div>
   <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About-Us</a>
-  <a href="ourservices.html">Our-Services</a>
-  <a href="ourproduct.html">Our-Product</a>
-  <a href="contact.html">Contact</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="faqs.html">FAQ'S</a>
-</nav>
-
-  </header>
+    <a href="index.html">Home</a>
+    <a href="about.html">About-Us</a>
+    <a href="ourservices.html">Our-Services</a>
+    <a href="ourproduct.html">Our-Product</a>
+    <a href="contact.html">Contact</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="faqs.html">FAQ'S</a>
+  </nav>
+</header>
 
   <section>
     <h2 id="Professional-Fencing-Services-You-Can-Rely-On">Professional Fencing Services You Can Rely On</h2>
