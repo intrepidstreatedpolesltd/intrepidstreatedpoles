@@ -6,121 +6,44 @@
   <title>Our Services - Intrepids Treated Poles Ltd</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 120px;
+}
 
-    header {
-      background-color: #2e7d32;
-      color: white;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      text-align: center;
-    }
+header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+}
 
-    header img {
-      width: 150px;
-      max-width: 100%;
-    }
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
 
-    h1 {
-      font-size: 24px;
-      margin: 10px 0;
-    }
+.header-logo img {
+  width: 150px;
+  height: auto;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #d0ffd0;
-    }
-
-    section {
-      padding: 30px 20px;
-      max-width: 900px;
-      margin: auto;
-      animation: fadeIn 1s ease;
-    }
-
-    h2, h3, h4, h5, h6 {
-      background-color: #2e7d32;
-      color: white;
-      padding: 10px;
-      border-radius: 5px;
-      margin-top: 30px;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-top: 15px;
-    }
-
-    .image img,
-    .image-gallery-3rows img {
-      width: 40%;
-      height: auto;
-      margin: 10px;
-      border-radius: 5px;
-      object-fit: cover;
-    }
-
-    .image,
-    .image-gallery-3rows {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-   .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .header-logo img {
-    width: 150px;
-    height: auto;
-  }
 .header-title {
   font-size: 24px;
   font-weight: bold;
@@ -128,28 +51,125 @@
   text-align: center;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
 
-  @media (max-width: 768px) {
-    .header-content {
-      flex-direction: column;
-      align-items: center;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
-    .header-logo img {
-      width: 100px;
-    }
+nav a:hover {
+  color: #d0ffd0;
+}
 
-    .header-title {
-      font-size: 20px;
-      text-align: center;
-    }
+section {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 1s ease;
+}
 
-    .image img,
-    .image-gallery-3rows img {
-      width: 80%;
-    }
+h2, h3, h4, h5, h6 {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.image img,
+.image-gallery-3rows img {
+  width: 30%;
+  height: auto;
+  margin: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.image,
+.image-gallery-3rows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.features-list {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  background-color: #2e7d32;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.section-body {
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ Mobile Responsive Fixes */
+@media (max-width: 768px) {
+  body {
+    padding-top: 180px;
   }
-  </style>
+
+  .header-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .header-logo img {
+    width: 100px;
+  }
+
+  .image img,
+  .image-gallery-3rows img {
+    width: 90%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+}
+</style>
 </head>
 <body>
  <!-- Header -->
