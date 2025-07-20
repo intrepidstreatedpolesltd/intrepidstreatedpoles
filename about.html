@@ -18,15 +18,34 @@
       line-height: 1.6;
     }
 
-    header {
-      background-color: #2e7d32;
-      color: white;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      text-align: center;
-    }
+   header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.header-logo img {
+  height: 80px;
+}
+
+.header-title {
+  flex: 1;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
 
     header img {
       width: 150px;
@@ -147,7 +166,6 @@
       margin-bottom: 10px;
     }
 
-    /* TREE PLANTATION IMAGE GRID */
     .tree-image-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -163,7 +181,6 @@
       display: block;
     }
 
-    /* STUMP TO STEM IMAGE SECTION */
     .stump-gallery {
       display: flex;
       justify-content: center;
@@ -181,6 +198,10 @@
     }
 
     @media (max-width: 768px) {
+      body {
+        padding-top: 160px; /* ✅ ADDED: Prevent mobile header overlap */
+      }
+
       nav {
         flex-direction: column;
         gap: 10px;
@@ -221,12 +242,10 @@
  <!-- Header -->
   <header>
     <div class="header-content">
-      <div class="header-logo">
-        <img src="logo.png" alt="Logo" />
-      </div>
-      <div class="header-title">Welcome to Intrepids Treated Poles Ltd</div>
-      <div class="header-empty"></div>
-    </div>
+  <div class="header-logo">
+    <img src="logo.png" alt="Logo" />
+  </div>
+  <div class="header-title">Welcome to Intrepids Treated Poles Ltd
   <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About-Us</a>
@@ -236,7 +255,7 @@
   <a href="gallery.html">Gallery</a>
   <a href="faqs.html">FAQ'S</a>
 </nav>
-
+  </div>
   </header>
 
   <!-- ABOUT SECTION -->
