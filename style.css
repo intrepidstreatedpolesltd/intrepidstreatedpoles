@@ -897,29 +897,30 @@ th {
   }
 }
 @media (max-width: 768px) {
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding-bottom: 10px;
-  }
-
-  body {
-    padding-top: 220px; /* Increase to fit stacked header */
-  }
-
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .header-title {
-    font-size: 18px;
-    margin-top: 10px;
-  }
-
+  /* Shrink logo */
   .header-logo img {
-    height: 80px;
+    height: 60px !important;
+  }
+
+  /* Reduce header padding */
+  header {
+    padding: 8px 10px !important;
+  }
+
+  /* Shrink header title font */
+  .header-title {
+    font-size: 18px !important;
+    margin-top: 5px !important;
+  }
+
+  /* Shrink nav links */
+  nav a {
+    font-size: 14px !important;
+    padding: 5px 0 !important;
+  }
+
+  /* Reduce overall top spacing for mobile */
+  body {
+    padding-top: 100px !important;
   }
 }
