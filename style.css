@@ -10,7 +10,7 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  padding-top: 140px; /* Slightly reduced for desktop; adjusted in mobile below */
+  padding-top: 160px; /* Leaves space for sticky header */
 }
 
 /* ===== Header ===== */
@@ -186,12 +186,8 @@ footer {
 
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
-  /* Increase padding to account for taller header */
   body {
     padding-top: 140px;
-  }
-  header {
-    padding-bottom: 10px;
   }
 
   .header-content {
@@ -200,21 +196,15 @@ footer {
   }
 
   .header-title {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 10px;
-  }
-  .header-logo img {
-    height: 80px;
   }
 
   nav {
     flex-direction: column;
     gap: 10px;
   }
-  nav a {
-    font-size: 16px;
-  }
-  
+
   .carousel-item img {
     height: 50vh;
   }
@@ -904,33 +894,5 @@ th {
   #contact .btn {
     font-size: 14px;
     padding: 8px 16px;
-  }
-}
-@media (max-width: 768px) {
-  /* Shrink logo */
-  .header-logo img {
-    height: 60px !important;
-  }
-
-  /* Reduce header padding */
-  header {
-    padding: 8px 10px !important;
-  }
-
-  /* Shrink header title font */
-  .header-title {
-    font-size: 18px !important;
-    margin-top: 5px !important;
-  }
-
-  /* Shrink nav links */
-  nav a {
-    font-size: 14px !important;
-    padding: 5px 0 !important;
-  }
-
-  /* Reduce overall top spacing for mobile */
-  body {
-    padding-top: 100px !important;
   }
 }
