@@ -32,14 +32,14 @@ header {
 }
 
 .header-logo img {
-  height: 110px;
+  height: 50px;
   width: auto;
 }
 
 .header-title {
   flex: 2;
   text-align: center;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -185,7 +185,7 @@ footer {
 }
 
 /* ===== Mobile Responsive ===== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   body {
     padding-top: 140px;
   }
@@ -230,7 +230,7 @@ footer {
   }
 
   .header-logo img {
-    height: 90px;
+    height: 50px;
   }
 
   .image img,
@@ -477,7 +477,7 @@ thead {
 }
 
 /* Mobile Responsive Fix */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .tree-image-gallery img,
   .stump-gallery img,
   .left-column img,
@@ -516,7 +516,7 @@ thead {
 }
 
 /* Mobile fix for image gallery on small screens */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .image-gallery img {
     width: 90%;
   }
@@ -579,7 +579,7 @@ th {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   nav {
     flex-direction: column;
     gap: 10px;
@@ -675,7 +675,7 @@ th {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
