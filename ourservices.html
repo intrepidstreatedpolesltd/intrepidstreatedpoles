@@ -6,7 +6,7 @@
   <title>Our Services - Intrepids Treated Poles Ltd</title>
   <link rel="stylesheet" href="style.css">
   <style>
-/* Global Reset */
+/* ===== Global Reset ===== */
 * {
   margin: 0;
   padding: 0;
@@ -18,9 +18,10 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  padding-top: 120px;
+  padding-top: 120px; /* allows room for sticky header */
 }
 
+/* ===== Header ===== */
 header {
   background-color: #2e7d32;
   color: white;
@@ -51,6 +52,7 @@ header {
   text-align: center;
 }
 
+/* ===== Navigation ===== */
 nav {
   display: flex;
   justify-content: center;
@@ -70,6 +72,7 @@ nav a:hover {
   color: #d0ffd0;
 }
 
+/* ===== Sections & Text ===== */
 section {
   padding: 30px 20px;
   max-width: 900px;
@@ -91,22 +94,6 @@ ul {
   margin-top: 15px;
 }
 
-.image img,
-.image-gallery-3rows img {
-  width: 30%;
-  height: auto;
-  margin: 10px;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-.image,
-.image-gallery-3rows {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .features-list {
   margin-top: 15px;
   margin-bottom: 20px;
@@ -126,6 +113,24 @@ ul {
   margin-top: 10px;
 }
 
+/* ===== Image Galleries ===== */
+.image img,
+.image-gallery-3rows img {
+  width: 30%;
+  height: auto;
+  margin: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.image,
+.image-gallery-3rows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ===== Footer ===== */
 footer {
   background-color: #333;
   color: white;
@@ -135,24 +140,42 @@ footer {
   font-size: 14px;
 }
 
+/* ===== Fade Animation ===== */
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* ✅ Mobile Responsive Fixes */
+/* ===== Mobile Responsive Fixes ===== */
 @media (max-width: 768px) {
   body {
-    padding-top: 180px;
+    padding-top: 130px; /* properly fits sticky header */
   }
 
-  .header-title {
-    font-size: 20px;
+  .header-content {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .header-logo img {
-    width: 100px;
+    width: 90px;
+  }
+
+  .header-title {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  nav a {
+    font-size: 16px;
   }
 
   .image img,
@@ -160,15 +183,11 @@ footer {
     width: 90%;
   }
 
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   table, th, td {
     font-size: 14px;
   }
 }
+
 </style>
 </head>
 <body>
