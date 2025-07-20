@@ -10,7 +10,7 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  padding-top: 160px; /* Leaves space for sticky header */
+  padding-top: 140px; /* Slightly reduced for desktop; adjusted in mobile below */
 }
 
 /* ===== Header ===== */
@@ -186,8 +186,12 @@ footer {
 
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
+  /* Increase padding to account for taller header */
   body {
     padding-top: 140px;
+  }
+  header {
+    padding-bottom: 10px;
   }
 
   .header-content {
@@ -196,15 +200,21 @@ footer {
   }
 
   .header-title {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 10px;
+  }
+  .header-logo img {
+    height: 80px;
   }
 
   nav {
     flex-direction: column;
     gap: 10px;
   }
-
+  nav a {
+    font-size: 16px;
+  }
+  
   .carousel-item img {
     height: 50vh;
   }
