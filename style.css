@@ -898,24 +898,28 @@ th {
 }
 @media (max-width: 768px) {
   header {
-    padding: 8px 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-bottom: 10px;
   }
 
-  .header-logo img {
-    height: 60px;
+  body {
+    padding-top: 220px; /* Increase to fit stacked header */
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .header-title {
     font-size: 18px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
-  body {
-    padding-top: 110px; /* Was 140-160px — shrink for phones */
-  }
-
-  nav a {
-    font-size: 15px;
-    padding: 5px 0;
+  .header-logo img {
+    height: 80px;
   }
 }
