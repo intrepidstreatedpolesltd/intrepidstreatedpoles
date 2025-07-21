@@ -1209,108 +1209,65 @@ th {
     padding: 8px 16px;
   }
 }
-/* ===== CONTACT PAGE STYLES ===== */
-
-#contact {
-  padding: 30px 20px;
-  max-width: 900px;
-  margin: auto;
-  animation: fadeIn 0.7s ease;
-}
-
-#contact h2 {
-  color: #2e7d32;
-  font-size: 28px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
-  text-align: center;
-}
-
-#contact form {
-  max-width: 500px;
+/* ===== WRAPPER STYLES ===== */
+.wrapper {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
-#contact input,
-#contact textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#contact .btn {
-  padding: 10px 20px;
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  display: inline-block;
-  text-align: center;
-}
-
-#contact .btn:hover {
-  background-color: #1b5e20;
-}
-
-#contact .loading-spinner {
-  display: none;
-  text-align: center;
-  margin-top: 20px;
-}
-
-#contact .loading-spinner div {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #2e7d32;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-  margin: 0 auto;
-}
-
-#contact p.contact-info {
-  margin-top: 30px;
-  text-align: center;
-}
-
-#contact .whatsapp-buttons,
-#contact .call-buttons {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#contact .btn img {
-  width: 20px;
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
+/* ===== MOBILE HEADER AND IMAGE FIX ===== */
 @media (max-width: 768px) {
-  #contact h2 {
-    font-size: 22px;
+  header {
+    padding: 10px 0;
   }
 
-  #contact form {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .header-logo img {
+    width: 120px;
+    height: auto;
+  }
+
+  .header-title {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav a {
+    padding: 8px 0;
+    font-size: 14px;
+    display: block;
+  }
+
+  .image-gallery img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Additional wrapper helper for extra small devices */
+@media (max-width: 480px) {
+  .wrapper {
     padding: 0 10px;
   }
 
-  #contact input,
-  #contact textarea {
-    font-size: 14px;
+  .header-title {
+    font-size: 16px;
   }
 
-  #contact .btn {
-    font-size: 14px;
-    padding: 8px 16px;
+  nav a {
+    font-size: 13px;
   }
 }
