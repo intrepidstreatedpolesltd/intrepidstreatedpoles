@@ -245,13 +245,13 @@ footer {
 /* === DESKTOP-ONLY IMAGE & LOGO SCALING === */
 @media (min-width: 769px) {
   .site-logo {
-    max-height: 80px;
+    max-height: 40px;
     width: auto;
   }
 
   .carousel-inner img,
   .section-body img {
-    max-width: 90%;
+    max-width: 40%;
     height: auto;
     margin: 0 auto;
   }
