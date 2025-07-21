@@ -798,8 +798,32 @@ nav a {
   border-radius: 6px;
   object-fit: cover;
 }
-/* ===== FAQ PAGE STYLES ===== */
+/* ===== BASE WRAPPER STYLE ===== */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
+/* ===== IMAGE GALLERY STYLES (OUR PRODUCT) ===== */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.image-gallery img {
+  width: 32%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+/* ===== FAQ PAGE STYLES ===== */
 section {
   padding: 120px 20px 30px;
   max-width: 900px;
@@ -856,24 +880,102 @@ th {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 600px) {
-  nav {
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+
+  header {
+    padding: 10px 0;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .header-title {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
+    padding-top: 10px;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+
+  section {
+    padding: 120px 10px 30px;
+  }
+
+  .image-gallery img,
+  .tree-image-gallery img,
+  .stump-gallery img,
+  .machinery-container img {
+    width: 100%;
+  }
+
+  .machinery-container {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  h2 {
+    font-size: 22px;
   }
 
   header h1 {
     font-size: 20px;
   }
+}
 
-  section {
-    padding-top: 130px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+/* Specific image galleries (tree/stump/machinery) */
+.tree-image-gallery,
+.stump-gallery,
+.machinery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
 
-  table {
-    font-size: 13px;
+.tree-image-gallery img,
+.stump-gallery img,
+.machinery-container img {
+  width: 32%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .tree-image-gallery img,
+  .stump-gallery img,
+  .machinery-container img {
+    width: 100%;
   }
 }
 /* ========== GALLERY PAGE STYLES ========== */
