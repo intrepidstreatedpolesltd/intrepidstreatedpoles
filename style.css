@@ -1,266 +1,202 @@
-/* === GLOBAL STYLES === */
-body {
+
+/* ===== Global Reset and Wrapper ===== */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  box-sizing: border-box;
 }
-
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-
-/* === WRAPPER FOR CONSISTENT LAYOUT === */
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+  padding: 0 15px;
 }
 
-/* === LOGO STYLING === */
-.site-logo {
-  max-height: 80px;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* === HEADER STYLES === */
+/* ===== Header and Navigation ===== */
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #2e7d32;
-  padding: 20px 0;
+  background-color: #2e7d32;
   color: white;
-  z-index: 10;
-  position: relative;
+  position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
-
 .header-content {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 100%;
+  padding: 10px 15px;
+  flex-wrap: wrap;
 }
-
+.header-logo img {
+  max-height: 50px;
+  width: auto;
+}
+.header-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
 nav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  padding-top: 10px;
+  flex-wrap: wrap;
+  background-color: #004d00;
+  padding: 8px 10px;
+  margin-top: 90px;
 }
-
 nav a {
   color: white;
+  margin: 6px 10px;
   text-decoration: none;
+  font-size: 14px;
   font-weight: bold;
 }
-
-/* === CAROUSEL === */
-#heroCarousel {
-  margin-top: 60px;
-}
-
-.carousel-inner img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* === SECTION STYLES === */
-.section-title {
-  font-size: 26px;
-  font-weight: bold;
-  margin: 40px 0 10px;
-  color: #2e7d32;
-  text-align: center;
-}
-
-.section-body {
-  padding: 15px 20px;
-  font-size: 16px;
-}
-
-/* === FOOTER === */
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  margin-top: 40px;
-}
-
-/* === CONTACT PAGE STYLES === */
-#contact {
-  padding: 30px 20px;
-  max-width: 900px;
-  margin: auto;
-  animation: fadeIn 0.7s ease;
-}
-
-#contact h2 {
-  color: #2e7d32;
-  font-size: 28px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
-  text-align: center;
-}
-
-#contact form {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-#contact input,
-#contact textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
+nav a:hover {
+  background-color: #228B22;
+  color: #d0ffd0;
   border-radius: 5px;
 }
 
-#contact .btn {
+/* ===== Carousel ===== */
+#heroCarousel {
+  margin-top: 140px;
+}
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+}
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: unset;
+}
+.carousel-caption h2 {
+  background: rgba(0, 100, 0, 0.7);
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* ===== Section Styling ===== */
+.section-title {
+  background-color: #2e7d32;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin: 40px 0 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.section-body {
+  font-size: 16px;
+  padding: 15px 20px;
+  text-align: justify;
+  animation: fadeIn 0.8s ease;
+}
+
+/* ===== Buttons ===== */
+.read-more-btn {
+  display: inline-block;
+  margin: 20px auto;
   padding: 10px 20px;
   background-color: #2e7d32;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  text-decoration: none;
   font-weight: bold;
-  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.read-more-btn:hover {
+  background-color: #256428;
+}
+
+/* ===== Product Images ===== */
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #333;
+  color: white;
   text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  margin-top: 40px;
 }
 
-#contact .btn:hover {
-  background-color: #1b5e20;
-}
-
-#contact .loading-spinner {
-  display: none;
-  text-align: center;
-  margin-top: 20px;
-}
-
-#contact .loading-spinner div {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #2e7d32;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-  margin: 0 auto;
-}
-
-#contact p.contact-info {
-  margin-top: 30px;
-  text-align: center;
-}
-
-#contact .whatsapp-buttons,
-#contact .call-buttons {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#contact .btn img {
-  width: 20px;
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-/* === ANIMATION === */
+/* ===== Animation ===== */
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
+  0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* === MEDIA QUERIES FOR MOBILE PHONES === */
+/* ===== Responsive Fixes ===== */
 @media (max-width: 768px) {
-  .wrapper {
-    padding: 0 10px;
+  body {
+    padding-top: 140px;
   }
-
-  header {
-    padding: 15px 10px;
-    flex-direction: column;
-  }
-
   .header-content {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-
+  .header-logo img {
+    max-height: 40px;
+  }
+  .header-title {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+  }
   nav {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    margin-top: 110px;
   }
-
-  .carousel-inner img {
-    height: auto;
+  nav a {
+    font-size: 14px;
+    margin: 5px 0;
   }
-
+  .carousel-caption h2 {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
   .section-title {
     font-size: 22px;
   }
-
   .section-body {
-    font-size: 14px;
+    font-size: 15px;
     padding: 10px;
   }
-
-  #contact h2 {
-    font-size: 22px;
-  }
-
-  #contact form {
-    padding: 0 10px;
-  }
-
-  #contact input,
-  #contact textarea {
+  .read-more-btn {
     font-size: 14px;
+    padding: 8px 15px;
   }
-
-  #contact .btn {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
-
-/* === DESKTOP IMAGE & LOGO FIXES === */
-@media (min-width: 769px) {
-  .site-logo {
-    max-width: 10%;
-    height: auto;
-    display: block;
-    margin: 0;
-  }
-
-  .carousel-inner img,
-  .section-body img {
-    max-width: 40%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .header-content {
-    align-items: center;
-    justify-content: space-between;
+  .product-image {
+    max-height: 200px;
   }
 }
