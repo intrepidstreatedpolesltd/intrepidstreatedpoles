@@ -21,6 +21,14 @@ img {
   box-sizing: border-box;
 }
 
+/* === LOGO STYLING (add class="site-logo" in HTML) === */
+.site-logo {
+  max-height: 80px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* === HEADER STYLES === */
 header {
   display: flex;
@@ -231,5 +239,20 @@ footer {
   #contact .btn {
     font-size: 14px;
     padding: 8px 16px;
+  }
+}
+
+/* === DESKTOP-ONLY IMAGE & LOGO SCALING === */
+@media (min-width: 769px) {
+  .site-logo {
+    max-height: 80px;
+    width: auto;
+  }
+
+  .carousel-inner img,
+  .section-body img {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
   }
 }
