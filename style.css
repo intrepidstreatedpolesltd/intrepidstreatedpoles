@@ -21,7 +21,7 @@ img {
   box-sizing: border-box;
 }
 
-/* === LOGO STYLING (add class="site-logo" in HTML) === */
+/* === LOGO STYLING === */
 .site-logo {
   max-height: 80px;
   width: auto;
@@ -245,14 +245,22 @@ footer {
 /* === DESKTOP-ONLY IMAGE & LOGO SCALING === */
 @media (min-width: 769px) {
   .site-logo {
-    max-height: 40px;
-    width: auto;
+    max-width: 10%;
+    height: auto;
+    display: block;
+    margin: 0;
   }
 
   .carousel-inner img,
   .section-body img {
     max-width: 40%;
     height: auto;
+    display: block;
     margin: 0 auto;
+  }
+
+  .header-content {
+    align-items: center;
+    justify-content: space-between;
   }
 }
