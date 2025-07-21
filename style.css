@@ -1,3 +1,5 @@
+/* ===== Combined and Enhanced style.css ===== */
+
 /* ===== Global Reset ===== */
 * {
   margin: 0;
@@ -11,6 +13,13 @@ body {
   color: #333;
   line-height: 1.6;
   padding-top: 160px; /* Leaves space for sticky header */
+}
+
+/* ===== Wrapper ===== */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* ===== Header ===== */
@@ -28,19 +37,22 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  padding: 10px 15px;
 }
 
 .header-logo img {
   height: 50px;
   width: auto;
+  max-height: 60px;
 }
 
 .header-title {
-  flex: 2;
+  flex: 1;
   text-align: center;
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: bold;
+  padding: 10px;
 }
 
 .header-empty {
@@ -54,24 +66,30 @@ nav {
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 10px;
+  background: #006400;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
   transition: color 0.3s;
 }
 
 nav a:hover {
   color: #d0ffd0;
+  background-color: #228B22;
 }
 
 /* ===== Carousel ===== */
+.carousel-inner img,
 .carousel-item img {
   width: 100%;
   height: 80vh;
   object-fit: cover;
+  max-height: 500px;
 }
 
 .carousel-caption {
@@ -81,12 +99,13 @@ nav a:hover {
 }
 
 .carousel-caption h2 {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 100, 0, 0.7);
   padding: 15px 25px;
   border-radius: 10px;
   font-weight: bold;
   display: inline-block;
   color: white;
+  font-size: 1.5rem;
 }
 
 /* ===== Sections ===== */
@@ -103,11 +122,13 @@ nav a:hover {
 .section-body {
   max-width: 1100px;
   margin: 20px auto;
-  padding: 0 20px;
+  padding: 0 20px 40px;
   font-size: 18px;
+  text-align: justify;
   animation: fadeIn 1s ease;
 }
 
+/* ===== Buttons ===== */
 .read-more-btn {
   display: inline-block;
   margin: 20px auto 0;
@@ -124,6 +145,7 @@ nav a:hover {
   background-color: #256428;
 }
 
+/* ===== Product Images ===== */
 .product-image {
   width: 100%;
   height: auto;
@@ -185,7 +207,7 @@ footer {
 }
 
 /* ===== Mobile Responsive ===== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body {
     padding-top: 140px;
   }
@@ -240,6 +262,22 @@ footer {
 
   table, th, td {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 0.95rem;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .read-more-btn {
+    font-size: 14px;
+    padding: 8px 15px;
   }
 }
 /* ========== OUR SERVICES PAGE SUPPORT ========== */
