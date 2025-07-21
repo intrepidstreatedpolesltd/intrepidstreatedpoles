@@ -978,6 +978,21 @@ th {
     width: 100%;
   }
 }
+/* ========== WRAPPER FOR ALL PAGES (INCLUDING GALLERY) ========== */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Ensures padding inside wrapper on smaller screens */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
+
 /* ========== GALLERY PAGE STYLES ========== */
 
 #gallery {
@@ -1054,6 +1069,7 @@ th {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
 }
 
+/* ========== MOBILE RESPONSIVE FIXES ========== */
 @media (max-width: 600px) {
   .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -1064,7 +1080,30 @@ th {
   .ongoing-projects-images img {
     width: 90%;
   }
+
+  header h1 {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  nav a {
+    display: block;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px 10px;
+  }
 }
+
 /* ===== CONTACT PAGE STYLES ===== */
 
 #contact {
