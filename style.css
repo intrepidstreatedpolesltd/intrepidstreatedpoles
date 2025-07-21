@@ -459,6 +459,78 @@ thead {
     bottom: 25px;
   }
 }
+/* ========== WRAPPER FOR CONSISTENT LAYOUT ========== */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ========== MOBILE HEADER FIX ========== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #2e7d32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  height: 70px;
+  z-index: 1000;
+}
+
+header img.logo {
+  height: 50px;
+  width: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  header img.logo {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+}
+
+/* ========== GLOBAL IMAGE RESPONSIVENESS ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ===== About Page Specific Styles ===== */
 .section-subtitle {
   background-color: white;
@@ -517,39 +589,7 @@ thead {
   margin-bottom: 10px;
 }
 
-.tree-image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0;
-  margin-top: 10px;
-}
-
-.tree-image-gallery img {
-  width: 32.9%;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  display: block;
-}
-
-.stump-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.stump-gallery img {
-  width: 70%;
-  max-width: 400px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-/* === ABOUT PAGE IMAGE FIXES === */
-
-/* Tree Plantation Images - Horizontal and Smaller */
+/* Tree Plantation Gallery */
 .tree-image-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -566,13 +606,14 @@ thead {
   object-fit: cover;
 }
 
-/* Stump Gallery - Two per row */
+/* Stump Gallery */
 .stump-gallery {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .stump-gallery img {
@@ -582,7 +623,7 @@ thead {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Treatment Machinery Columns */
+/* Machinery Columns */
 .machinery-container {
   display: flex;
   flex-wrap: wrap;
@@ -606,7 +647,7 @@ thead {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile Responsive Fix */
+/* ===== Mobile-Only Fixes for About Page Images ===== */
 @media (max-width: 600px) {
   .tree-image-gallery img,
   .stump-gallery img,
@@ -626,6 +667,7 @@ thead {
     flex: 1 1 100%;
   }
 }
+
 /* === OUR PRODUCT PAGE SUPPORT STYLES (FIXED for 3 horizontal images) === */
 
 .image-gallery {
