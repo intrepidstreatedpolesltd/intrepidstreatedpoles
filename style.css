@@ -280,6 +280,64 @@ footer {
     padding: 8px 15px;
   }
 }
+/* ========== GLOBAL WRAPPER FOR ALL PAGES ========== */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ========== HEADER & NAV FIXES FOR MOBILE ========== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-logo img {
+  height: 50px;
+  max-width: 100%;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+nav a {
+  color: #2e7d32;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+nav a:hover {
+  background-color: #2e7d32;
+  color: #fff;
+  border-radius: 5px;
+}
+
 /* ========== OUR SERVICES PAGE SUPPORT ========== */
 
 /* Global Headings EXCEPT inside gallery */
@@ -356,8 +414,33 @@ thead {
   overflow-x: auto;
 }
 
-/* Mobile Support */
+/* ========== CAROUSEL & HERO IMAGE FIX ========== */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+/* ========== RESPONSIVE FIXES ========== */
 @media (max-width: 768px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+
+  .header-logo img {
+    height: 40px;
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
   .image img,
   .image-gallery-3rows img {
     width: 90%;
@@ -365,6 +448,15 @@ thead {
 
   table, th, td {
     font-size: 14px;
+  }
+
+  .carousel-caption h2 {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .carousel-caption {
+    bottom: 25px;
   }
 }
 /* ===== About Page Specific Styles ===== */
