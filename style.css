@@ -79,7 +79,7 @@ nav a:hover {
 /* ===== Carousel ===== */
 .carousel-item img {
   width: 100%;
-  height: auto;
+ height: 500px; /* Set a fixed height */
   object-fit: cover;
 }
 
@@ -214,10 +214,9 @@ footer {
     gap: 10px;
   }
 
-  .carousel-item img {
-    height: 50vh;
-  }
-
+.carousel-item img {
+  height: 300px; /* Smaller for mobile screens */
+}
   .carousel-caption h2 {
     font-size: 16px;
     padding: 10px 15px;
