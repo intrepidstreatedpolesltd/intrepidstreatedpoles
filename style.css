@@ -9,8 +9,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
-  padding-top: 160px; /* Leaves space for sticky header */
+  line-height: 1.0;
+  padding-top: 140px; /* Leaves space for sticky header */
 }
 /* === Optional Wrapper === */
 .wrapper {
@@ -23,7 +23,7 @@ body {
 header {
   background-color: #2e7d32;
   color: white;
-  padding: 15px 20px;
+  padding: 10px 18px;
   position: sticky;
   top: 0;
   width: 100%;
@@ -39,7 +39,7 @@ header {
 
 /* Logo */
 .header-logo img {
-  width: 25%;/* ✅ FIXED LOGO SIZE */
+  width: 15%;/* ✅ FIXED LOGO SIZE */
   height: auto;
   object-fit: contain;
 }
@@ -79,7 +79,7 @@ nav a:hover {
 /* ===== Carousel ===== */
 .carousel-item img {
   width: 100%;
- height: 500px; /* Set a fixed height */
+ height: 400px; /* Set a fixed height */
   object-fit: cover;
 }
 
@@ -102,11 +102,11 @@ nav a:hover {
 .section-title {
   background-color: #2e7d32;
   color: white;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .section-body {
@@ -205,7 +205,7 @@ footer {
   }
 
   .header-title {
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 10px;
   }
 
@@ -218,27 +218,27 @@ footer {
   height: 300px; /* Smaller for mobile screens */
 }
   .carousel-caption h2 {
-    font-size: 16px;
+    font-size: 15px;
     padding: 10px 15px;
   }
 
   .section-title {
-    font-size: 22px;
+    font-size: 18px;
     padding: 15px;
   }
 
   .section-body {
-    font-size: 16px;
+    font-size: 15px;
     padding: 0 15px;
   }
 
   .read-more-btn {
-    font-size: 16px;
-    padding: 8px 16px;
+    font-size: 14px;
+    padding: 5px 14px;
   }
 
   .header-logo img {
-    height: 90px;
+    height: 50px;
   }
 
   .image img,
