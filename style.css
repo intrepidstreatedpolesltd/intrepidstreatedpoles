@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
   padding-top: 160px; /* Leaves space for sticky header */
 }
-/* Wrapper for consistent padding */
+/* === Optional Wrapper === */
 .wrapper {
   max-width: 1200px;
   margin: auto;
@@ -39,7 +39,7 @@ header {
 
 /* Logo */
 .header-logo img {
-  width: 25%;
+  width: 25%;/* ✅ FIXED LOGO SIZE */
   height: auto;
   object-fit: contain;
 }
