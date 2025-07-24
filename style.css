@@ -34,12 +34,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
+    flex-wrap: wrap; /* allow wrapping if needed */
+  gap: 15px;        /* spacing between logo, title, and spacer */
 }
 
 /* Logo */
 .header-logo img {
-  width: 15%;/* ✅ FIXED LOGO SIZE */
+   width: 100px; /* or try 20px */
   height: auto;
   object-fit: contain;
 }
@@ -48,8 +49,10 @@ header {
 .header-title {
   flex: 1;
   text-align: center;
- font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;       /* Prevent line break */
+  overflow: hidden;
+  text-overflow: ellipsis;   /* Optional: trim long titles on small screens */
 }
 
 .header-empty {
@@ -195,9 +198,11 @@ footer {
 
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
-  body {
-    padding-top: 140px;
+  .header-title {
+    white-space: normal; /* Allow wrapping for very small screens */
+    font-size: 1.2rem;
   }
+}
 
   .header-content {
     flex-direction: column;
