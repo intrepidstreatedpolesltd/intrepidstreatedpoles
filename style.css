@@ -60,24 +60,26 @@ header {
 }
 
 /* ===== Navigation ===== */
-nav {
+.main-nav {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;      /* allows wrapping on smaller screens */
-  gap: 10px;            /* spacing between links */
-  margin-top: 10px;
+  gap: 12px;
+  padding: 10px 0;
+  background-color: #2e7d32; /* Optional if not already set */
+  flex-wrap: wrap; /* for mobile */
 }
 
-nav a {
+.main-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
+  padding: 6px 12px;
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #d0ffd0;
+.main-nav a:hover {
+  color: #cfffcc;
 }
 
 /* ===== Carousel ===== */
@@ -199,12 +201,17 @@ footer {
 
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
-  nav {
+  .main-nav {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+    padding: 5px 0;
   }
 }
-
   .header-content {
     flex-direction: column;
     align-items: center;
