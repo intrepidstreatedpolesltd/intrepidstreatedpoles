@@ -118,6 +118,24 @@ header {
   margin-top: 5px;
 }
 }
+/* Reduce margin after section titles */
+.section-title,
+.section-subtitle {
+  margin-bottom: 5px; /* Reduce from 15px or 30px */
+}
+
+/* Reduce spacing in paragraphs under each section */
+#about-Us p,
+.features-list ul li {
+  margin-bottom: 5px; /* Reduce from 8px or more */
+}
+
+/* Reduce top margin between sections */
+section {
+  margin-top: 20px; /* Add this if not present */
+  padding-top: 20px; /* Reduce from 120px */
+}
+
 
 
 .section-body {
