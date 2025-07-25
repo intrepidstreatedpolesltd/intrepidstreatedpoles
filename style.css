@@ -943,3 +943,16 @@ th {
     padding: 8px 16px;
   }
 }
+/* === Final Fix: Remove Gap Below Section Body in About Page === */
+#about-Us .section-body {
+  margin-bottom: 5px; /* Reduce from default */
+  padding-bottom: 0;
+}
+
+#about-Us p {
+  margin-bottom: 4px;
+}
+
+.section-subtitle {
+  margin-top: 10px !important;  /* Reduce distance before next subtitle */
+}
