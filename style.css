@@ -1016,3 +1016,74 @@ th {
     display: none;
   }
 }
+/* ========== MOBILE NAVIGATION STYLES ========== */
+.mobile-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #004d00; /* Dark green to match branding */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.mobile-header .logo img {
+  max-width: 90px;
+}
+
+.hamburger {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hidden by default */
+.mobile-nav {
+  display: none;
+  background-color: #e6ffe6; /* Light green background */
+  position: fixed;
+  top: 60px; /* height of the header */
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* When active, show menu */
+.mobile-nav.active {
+  display: block;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-nav ul li {
+  margin: 15px 0;
+}
+
+.mobile-nav ul li a {
+  color: #004d00; /* Dark green links */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.mobile-nav ul li a:hover {
+  color: #007f00; /* Brighter green on hover */
+}
+@media (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+  }
+
+  nav, .desktop-nav {
+    display: none; /* hide desktop nav */
+  }
+}
