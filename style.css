@@ -1,4 +1,4 @@
-/* ===== Global Reset ===== */
+Global Reset ===== */
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +9,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
-  padding-top: 160px; /* Leaves space for sticky header */
+  line-height: 1.0;
+  padding-top: 140px; /* Leaves space for sticky header */
 }
 /* === Optional Wrapper === */
 .wrapper {
@@ -964,14 +964,65 @@ th {
     display: none;
   }
 
-/* ===== Mobile Header Fix ===== */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #green;
+  }
+
+  .mobile-header .logo img {
+    height: 40px;
+  }
+
+  .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .mobile-nav {
+    display: none;
+    background-color: #green;
+    padding: 10px 0;
+  }
+
+  .mobile-nav.active {
+    display: block;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-nav li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+}
+
+/* On desktop, hide mobile header and nav */
+@media screen and (min-width: 769px) {
+  .mobile-header,
+  .mobile-nav {
+    display: none;
+  }
+}
+/* ========== MOBILE NAVIGATION STYLES ========== */
 .mobile-header {
   display: none;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 15px;
-  background-color: #004d00;
+  padding: 10px 15px;
+  background-color: #004d00; /* Dark green to match branding */
   position: fixed;
   top: 0;
   width: 100%;
@@ -979,49 +1030,15 @@ th {
 }
 
 .mobile-header .logo img {
-  width: 25%;
   max-width: 90px;
-  height: auto;
 }
 
 .hamburger {
-  font-size: 28px;
-  color: white;
+  font-size: 30px;
+  color: #fff;
   cursor: pointer;
 }
 
-/* ===== Navigation Menu (Mobile) ===== */
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  background-color: #004d00;
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  z-index: 998;
-}
-
-.mobile-nav a {
-  padding: 10px;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  border-bottom: 1px solid #ccc;
-}
-
-/* ===== Tighten Global Spacing ===== */
-body, section, .content, .wrapper {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1, h2, h3, p {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 0;
-}
 /* Hidden by default */
 .mobile-nav {
   display: none;
@@ -1061,17 +1078,12 @@ h1, h2, h3, p {
 .mobile-nav ul li a:hover {
   color: #007f00; /* Brighter green on hover */
 }
-/* ===== Ensure Responsive Viewport ===== */
 @media (max-width: 768px) {
   .mobile-header {
     display: flex;
   }
 
   nav, .desktop-nav {
-    display: none;
-  }
-
-  .mobile-nav {
-    display: flex;
+    display: none; /* hide desktop nav */
   }
 }
