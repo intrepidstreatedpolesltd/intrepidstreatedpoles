@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
@@ -30,22 +34,23 @@ header {
   width: 100%;
   z-index: 1000;
 }
+
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-    flex-wrap: wrap; /* allow wrapping if needed */
-  gap: 15px;        /* spacing between logo, title, and spacer */
+  flex-wrap: wrap;
+  gap: 15px;
 }
-/* Logo */
+
 .header-logo img {
-  width: 70px; /* Reduced from 100px */
+  width: 70px;
   height: auto;
   object-fit: contain;
 }
 
 .header-title {
-  flex: 2; /* increased from 1 */
+  flex: 2;
   text-align: center;
   font-size: 1.5rem;
   white-space: nowrap;
@@ -59,6 +64,7 @@ header {
   align-items: center;
   list-style: none;
 }
+
 .header-empty {
   flex: 1;
 }
@@ -69,9 +75,10 @@ header {
   justify-content: center;
   gap: 12px;
   padding: 10px 0;
-  background-color: #2e7d32; /* Optional if not already set */
-  flex-wrap: wrap; /* for mobile */
+  background-color: #2e7d32;
+  flex-wrap: wrap;
 }
+
 .main-nav a {
   color: white;
   text-decoration: none;
@@ -80,13 +87,15 @@ header {
   padding: 6px 12px;
   transition: color 0.3s;
 }
+
 .main-nav a:hover {
   color: #cfffcc;
 }
+
 /* ===== Carousel ===== */
 .carousel-item img {
   width: 100%;
- height: 400px; /* Set a fixed height */
+  height: 400px;
   object-fit: cover;
 }
 
@@ -104,6 +113,7 @@ header {
   display: inline-block;
   color: white;
 }
+
 /* ===== Section Layouts ===== */
 section {
   padding: 30px 0;
@@ -118,7 +128,7 @@ section {
   font-size: 22px;
   font-weight: bold;
   padding: 10px;
-  margin: 10px 0 5px; /* top, right/left, bottom */
+  margin: 10px 0 5px;
   border-radius: 5px;
 }
 
@@ -128,6 +138,7 @@ section {
   margin: 10px auto;
   line-height: 1.4;
 }
+
 .read-more-btn {
   display: inline-block;
   margin: 20px auto 0;
@@ -152,6 +163,7 @@ section {
   border-radius: 5px;
   margin-bottom: 15px;
 }
+
 /* ===== Contact Section ===== */
 #contact {
   background-color: #fff;
@@ -205,16 +217,11 @@ table {
   margin-top: 20px;
   text-align: center;
 }
+
 table, th, td {
-  border: 1px solid #2e7d32;
   border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
-}
-
-table {
-  width: 100%;
-  margin: 20px 0;
 }
 
 thead {
@@ -231,13 +238,17 @@ thead {
   border-radius: 5px;
   object-fit: cover;
 }
+
 .image,
 .image-gallery-3rows {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.tree-image-gallery, .stump-gallery, .machinery-container {
+
+.tree-image-gallery,
+.stump-gallery,
+.machinery-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -252,6 +263,7 @@ thead {
   height: auto;
   border-radius: 8px;
 }
+
 /* ===== Footer ===== */
 footer {
   background-color: #333;
@@ -268,7 +280,7 @@ footer {
   to { opacity: 1; }
 }
 
-/* MOBILE HEADER + NAV */
+/* ===== MOBILE HEADER ===== */
 .mobile-header {
   display: none;
   justify-content: space-between;
@@ -276,16 +288,22 @@ footer {
   padding: 10px 15px;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
 }
 
 .mobile-header .logo img {
   height: 40px;
 }
-hamburger {
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 28px;
   cursor: pointer;
 }
-
 
 .hamburger div {
   width: 25px;
@@ -310,10 +328,12 @@ hamburger {
 .mobile-nav.active {
   display: block;
 }
+
 .mobile-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 10px;
 }
 
 .mobile-nav li {
@@ -322,20 +342,20 @@ hamburger {
 
 .mobile-nav li a {
   text-decoration: none;
-  color: #333;
+  color: white;
   font-weight: bold;
 }
 
-/* RESPONSIVE TOGGLE */
+/* ===== Responsive Media Queries ===== */
 @media (max-width: 768px) {
   .mobile-header {
     display: flex;
   }
-.header-content,
+
+  .header-content,
   .main-nav {
     display: none;
   }
-}
 
   .section-subtitle {
     font-size: 18px;
@@ -346,7 +366,8 @@ hamburger {
     font-size: 15px;
     margin: 8px;
   }
-    .read-more-btn {
+
+  .read-more-btn {
     font-size: 14px;
     padding: 5px 14px;
   }
@@ -360,7 +381,7 @@ hamburger {
     width: 90%;
   }
 
-table, th, td {
+  table, th, td {
     font-size: 14px;
   }
 
@@ -372,9 +393,5 @@ table, th, td {
   .stump-gallery img,
   .machinery-container img {
     max-width: 100%;
-  }
-
-  .mobile-nav ul {
-    margin-top: 10px;
   }
 }
