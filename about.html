@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Intrepids Treated Poles Ltd</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Intrepids Treated Poles Ventures</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrapper">
    <!-- Header -->
   <header>
-    <!-- ✅ Mobile Hamburger Header -->
-    <div class="mobile-header">
-      <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="Logo" /></a>
-      </div>
-      <div class="hamburger" id="hamburger">&#9776;</div>
+    <!-- ✅ Mobile Header -->
+  <div class="mobile-header">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
     </div>
-
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
     <!-- ✅ Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav">
+      <nav class="mobile-nav" id="mobileNav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About-Us</a></li>
@@ -151,14 +154,18 @@
       <p>&copy; 2025 Intrepids Treated Poles Ltd. All rights reserved.</p>
     </footer>
   </div> <!-- End of wrapper -->
+  <!-- ✅ Script at the End -->
   <script>
-  function toggleMobileMenu() {
-    const nav = document.getElementById("mobileNav");
-    nav.classList.toggle("active");
-  }
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.getElementById("mobileNav");
 
-  document.getElementById("hamburger").addEventListener("click", toggleMobileMenu);
-</script>
+      hamburger.addEventListener("click", function () {
+        nav.classList.toggle("active");
+      });
+    });
+  </script>
+>
 
 </body>
 </html>
