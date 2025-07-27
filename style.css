@@ -10,14 +10,14 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  padding-top: 160px; /* Leaves space for sticky header */
+  padding-top: 120px; /* Leaves space for sticky header */
 }
 
 /* ===== Header ===== */
 header {
   background-color: #2e7d32;
   color: white;
-  padding: 15px 20px;
+  padding: 10px 15px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -32,15 +32,16 @@ header {
 }
 
 .header-logo img {
-  height: 110px;
+  height: 70px;
   width: auto;
 }
 
 .header-title {
   flex: 2;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
+  margin-top: 5px;
 }
 
 .header-empty {
@@ -108,6 +109,27 @@ nav a:hover {
 
   .nav-links.show {
     display: flex;
+  }
+}
+body {
+    padding-top: 120px; /* reduced from 140px or 160px */
+  }
+
+  header {
+    padding: 10px 15px; /* reduce header space */
+  }
+
+  .header-logo img {
+    height: 70px; /* smaller logo */
+  }
+
+  .header-title {
+    font-size: 18px; /* smaller title text */
+    margin-top: 5px;  /* less spacing */
+  }
+
+  .nav-links {
+    top: 100px; /* also reduce position of nav dropdown */
   }
 }
 
