@@ -11,12 +11,17 @@
   <header>
     <div class="header-content">
       <div class="header-logo">
-       <img src="logo.png" alt="Intrepids Treated Poles Ltd Logo" />
+        <img src="logo.png" alt="Intrepids Treated Poles Ltd Logo" />
       </div>
       <div class="header-title">Welcome to Intrepids Treated Poles Ltd</div>
       <div class="header-empty"></div>
     </div>
-    <nav>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+    <!-- Navigation -->
+    <nav id="nav-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About-Us</a>
       <a href="ourservices.html">Our-Services</a>
@@ -94,6 +99,11 @@
   </footer>
 
   <script>
+    function toggleMenu() {
+      var menu = document.getElementById("nav-menu");
+      menu.classList.toggle("show");
+    }
+
     document.getElementById("contactForm").addEventListener("submit", function (e) {
       document.getElementById("loadingSpinner").style.display = "block";
 
