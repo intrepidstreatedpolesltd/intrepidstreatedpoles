@@ -24,11 +24,32 @@ body {
 header {
   background-color: #2e7d32;
   color: white;
-  padding: 20px 0;
-  position: fixed;
+  padding: 10px 18px;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    flex-wrap: wrap; /* allow wrapping if needed */
+  gap: 15px;        /* spacing between logo, title, and spacer */
+}
+/* Logo */
+.header-logo img {
+   width: 100px; /* or try 20px */
+  height: auto;
+  object-fit: contain;
+}
+.header-title {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  white-space: nowrap;       /* Prevent line break */
+  overflow: hidden;
+  text-overflow: ellipsis;   /* Optional: trim long titles on small screens */
 }
 
 .main-nav, .nav-links {
@@ -37,13 +58,51 @@ header {
   align-items: center;
   list-style: none;
 }
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
+.header-empty {
+  flex: 1;
 }
 
+/* ===== Navigation ===== */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  background-color: #2e7d32; /* Optional if not already set */
+  flex-wrap: wrap; /* for mobile */
+}
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6px 12px;
+  transition: color 0.3s;
+}
+.main-nav a:hover {
+  color: #cfffcc;
+}
+/* ===== Carousel ===== */
+.carousel-item img {
+  width: 100%;
+ height: 400px; /* Set a fixed height */
+  object-fit: cover;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: unset;
+}
+
+.carousel-caption h2 {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: inline-block;
+  color: white;
+}
 /* ===== Section Layouts ===== */
 section {
   padding: 30px 0;
@@ -58,7 +117,7 @@ section {
   font-size: 22px;
   font-weight: bold;
   padding: 10px;
-  margin: 10px 0 5px;
+  margin: 10px 0 5px; /* top, right/left, bottom */
   border-radius: 5px;
 }
 
@@ -68,7 +127,30 @@ section {
   margin: 10px auto;
   line-height: 1.4;
 }
+.read-more-btn {
+  display: inline-block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #2e7d32;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
+.read-more-btn:hover {
+  background-color: #256428;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
 /* ===== Contact Section ===== */
 #contact {
   background-color: #fff;
@@ -116,9 +198,15 @@ section {
 }
 
 /* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+}
 table, th, td {
   border: 1px solid #2e7d32;
-  border-collapse: collapse;
+  border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
 }
@@ -128,7 +216,26 @@ table {
   margin: 20px 0;
 }
 
+thead {
+  background-color: #2e7d32;
+  color: white;
+}
+
 /* ===== Image Galleries ===== */
+.image img,
+.image-gallery-3rows img {
+  width: 30%;
+  height: auto;
+  margin: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.image,
+.image-gallery-3rows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .tree-image-gallery, .stump-gallery, .machinery-container {
   display: flex;
   flex-wrap: wrap;
@@ -143,6 +250,15 @@ table {
   max-width: 300px;
   height: auto;
   border-radius: 8px;
+}
+/* ===== Footer ===== */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
 }
 
 /* ===== Animations ===== */
@@ -238,6 +354,23 @@ table {
   .section-body {
     font-size: 15px;
     margin: 8px;
+  }
+    .read-more-btn {
+    font-size: 14px;
+    padding: 5px 14px;
+  }
+
+  .header-logo img {
+    height: 50px;
+  }
+
+  .image img,
+  .image-gallery-3rows img {
+    width: 90%;
+  }
+
+table, th, td {
+    font-size: 14px;
   }
 
   .contact-wrapper {
