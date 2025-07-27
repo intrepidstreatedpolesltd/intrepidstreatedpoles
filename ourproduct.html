@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- Header -->
+<!-- Header with Hamburger Support -->
 <header>
   <div class="header-content">
     <div class="header-logo">
@@ -16,15 +16,19 @@
     </div>
     <div class="header-title">Welcome to Intrepids Treated Poles Ltd</div>
   </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About-Us</a>
-    <a href="ourservices.html">Our-Services</a>
-    <a href="ourproduct.html">Our-Product</a>
-    <a href="contact.html">Contact</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="faqs.html">FAQ'S</a>
-  </nav>
+
+  <div class="main-nav">
+<div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About-Us</a>
+      <a href="ourservices.html">Our-Services</a>
+      <a href="ourproduct.html">Our-Product</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faqs.html">FAQ'S</a>
+    </nav>
+  </div>
 </header>
 
 <!-- ✅ ORIGINAL BODY CONTENT (UNTOUCHED) -->
@@ -138,6 +142,12 @@
 <footer>
   <p>&copy; 2025 Intrepids Treated Poles Ltd. All rights reserved.</p>
 </footer>
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector(".nav-links");
+    nav.classList.toggle("show");
+  }
+</script>
 
 </body>
 </html>
