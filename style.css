@@ -1134,4 +1134,44 @@ th {
     display: none;
   }
 }
+/* === Hamburger Icon === */
+#hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+/* === Mobile Navigation Menu === */
+.mobile-nav {
+  display: none;
+  background-color: white;
+  position: absolute;
+  top: 100px; /* adjust if needed */
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+}
+
+.mobile-nav.show {
+  display: block;
+}
+
+/* Optional: Flex layout for header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
 
