@@ -309,11 +309,15 @@ footer {
 .pole-card p {
   margin: 4px 0;
 }
+.pole-card h4 {
+  font-size: 18px;
+}
 
-/* ===== Animations ===== */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.pole-card p {
+  font-size: 15px;
+}
+.horizontal-table {
+  margin-bottom: 40px;
 }
 
 /* ===== Animations ===== */
