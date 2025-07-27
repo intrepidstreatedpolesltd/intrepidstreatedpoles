@@ -39,17 +39,18 @@ header {
 }
 /* Logo */
 .header-logo img {
-   width: 100px; /* or try 20px */
+  width: 70px; /* Reduced from 100px */
   height: auto;
   object-fit: contain;
 }
+
 .header-title {
-  flex: 1;
+  flex: 2; /* increased from 1 */
   text-align: center;
   font-size: 1.5rem;
-  white-space: nowrap;       /* Prevent line break */
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;   /* Optional: trim long titles on small screens */
+  text-overflow: ellipsis;
 }
 
 .main-nav, .nav-links {
