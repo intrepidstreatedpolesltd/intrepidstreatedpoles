@@ -4,26 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Intrepids Treated Poles Ltd</title>
-   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navMenu");
+      nav.classList.toggle("show");
+    }
+  </script>
 </head>
 <body>
- <!-- Header -->
+  <!-- Header -->
   <header>
     <div class="header-content">
-  <div class="header-logo">
-    <img src="logo.png" alt="Logo" />
-  </div>
-  <div class="header-title">Welcome to Intrepids Treated Poles Ltd
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About-Us</a>
-  <a href="ourservices.html">Our-Services</a>
-  <a href="ourproduct.html">Our-Product</a>
-  <a href="contact.html">Contact</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="faqs.html">FAQ'S</a>
-</nav>
-  </div>
+      <div class="header-logo">
+        <img src="logo.png" alt="Logo" />
+      </div>
+      <div class="header-title">
+        Welcome to Intrepids Treated Poles Ltd
+        <!-- Hamburger icon - shown only on mobile -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <!-- Navigation Menu -->
+        <nav class="nav-links" id="navMenu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About-Us</a>
+          <a href="ourservices.html">Our-Services</a>
+          <a href="ourproduct.html">Our-Product</a>
+          <a href="contact.html">Contact</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="faqs.html">FAQ'S</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <!-- ABOUT SECTION -->
@@ -90,7 +101,7 @@
 
   <!-- TREE PLANTATIONS -->
   <section>
-   <h2 id="tree-plantation">TREE PLANTATIONS</h2>
+    <h2 id="tree-plantation">TREE PLANTATIONS</h2>
     <div class="features-list">
       <ul>
         <li>Nested in the fertile coastal region of Lamu, our plantations are purposefully established to grow high-quality trees ideal for treated pole production. The region’s favorable climate and rich soils support healthy, fast-growing trees with strong, straight trunks-perfect for utility, fencing and construction use.</li>
