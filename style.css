@@ -66,6 +66,50 @@ nav a {
 nav a:hover {
   color: #d0ffd0;
 }
+/* ===== Hamburger Menu (Mobile Only) ===== */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #2e7d32;
+    position: absolute;
+    top: 120px; /* below header */
+    right: 15px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .nav-links a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
 
 /* ===== Carousel ===== */
 .carousel-item img {
