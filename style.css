@@ -268,28 +268,24 @@ footer {
   to { opacity: 1; }
 }
 
-/* ===== Mobile Header & Hamburger ===== */
+/* MOBILE HEADER + NAV */
 .mobile-header {
   display: none;
-  background-color: #2e7d32;
-  padding: 10px 15px;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1001;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
 
 .mobile-header .logo img {
-  width: 25%;
+  height: 40px;
 }
-
-.hamburger {
-  display: none;
-  flex-direction: column;
+hamburger {
+  font-size: 28px;
   cursor: pointer;
 }
+
 
 .hamburger div {
   width: 25px;
@@ -312,40 +308,34 @@ footer {
 }
 
 .mobile-nav.active {
-  display: flex;
+  display: block;
 }
-
 .mobile-nav ul {
   list-style: none;
   padding: 0;
-  width: 100%;
-  text-align: center;
+  margin: 0;
 }
 
 .mobile-nav li {
-  padding: 15px;
-  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
 }
 
-.mobile-nav a {
-  color: white;
+.mobile-nav li a {
   text-decoration: none;
-  font-size: 18px;
+  color: #333;
+  font-weight: bold;
 }
 
-/* ===== Responsive Styles ===== */
+/* RESPONSIVE TOGGLE */
 @media (max-width: 768px) {
-  header, .main-nav {
-    display: none !important;
-  }
-
   .mobile-header {
-    display: flex !important;
-  }
-
-  .hamburger {
     display: flex;
   }
+.header-content,
+  .main-nav {
+    display: none;
+  }
+}
 
   .section-subtitle {
     font-size: 18px;
