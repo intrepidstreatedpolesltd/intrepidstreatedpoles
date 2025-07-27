@@ -82,57 +82,117 @@ nav a:hover {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  body {
+    padding-top: 120px; /* reduce vertical space under fixed header */
+  }
+
+  header {
+    padding: 10px 15px; /* tighter padding */
+  }
+
+  .header-logo img {
+    height: 70px; /* smaller logo image */
+  }
+
+  .header-title {
+    font-size: 18px; /* smaller welcome text */
+    margin-top: 5px;
+    text-align: center;
+  }
+
   .hamburger {
-    display: block;
+    display: flex;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #2e7d32;
     position: absolute;
-    top: 120px; /* below header */
+    background-color: #357a38;
+    top: 100px; /* adjust based on reduced header height */
     right: 15px;
-    width: 200px;
-    padding: 10px;
-    border-radius: 8px;
-    z-index: 1000;
-  }
-
-  .nav-links a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-    border-bottom: 1px solid #ccc;
+    width: 180px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
   }
 
   .nav-links.show {
     display: flex;
   }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  .service {
+    width: 100%;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact form {
+    width: 90%;
+  }
+
+  .about-container {
+    padding: 20px;
+  }
+
+  .about-container h2 {
+    font-size: 22px;
+  }
+
+  .about-container p {
+    font-size: 14px;
+  }
+
+  .product-item {
+    width: 100%;
+  }
+
+  .faq {
+    padding: 10px;
+  }
+
+  .faq-item h3 {
+    font-size: 16px;
+  }
+
+  .faq-item p {
+    font-size: 14px;
+  }
+
+  .wrapper {
+    padding: 10px;
+  }
+
+  .wrapper h1,
+  .wrapper h2 {
+    font-size: 20px;
+  }
 }
-body {
-    padding-top: 120px; /* reduced from 140px or 160px */
-  }
-
-  header {
-    padding: 10px 15px; /* reduce header space */
-  }
-
-  .header-logo img {
-    height: 70px; /* smaller logo */
-  }
-
-  .header-title {
-    font-size: 18px; /* smaller title text */
-    margin-top: 5px;  /* less spacing */
-  }
-
-  .nav-links {
-    top: 100px; /* also reduce position of nav dropdown */
-  }
-}
-
 /* ===== Carousel ===== */
 .carousel-item img {
   width: 100%;
