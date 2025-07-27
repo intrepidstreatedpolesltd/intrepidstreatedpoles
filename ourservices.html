@@ -2,208 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Services - Intrepids Treated Poles Ltd</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Desktop Header and Nav -->
+  <div class="header-content">
+    <div class="header-logo">
+      <img src="logo.png" alt="Intrepids Treated Poles Ltd Logo" />
+    </div>
+    <div class="header-title">Welcome to Intrepids Treated Poles Ltd</div>
+    <div class="header-empty"></div>
+  </div>
+  <nav class="header-content">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ourservices.html">Services</a></li>
+      <li><a href="ourproduct.html">Our Product</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Header and Nav -->
+  <div class="mobile-header">
+    <div class="mobile-logo">
+      <img src="logo.png" alt="Intrepids Treated Poles Ltd Logo" />
+    </div>
+    <div class="mobile-title">Intrepids Treated Poles Ltd</div>
+    <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ourservices.html">Services</a></li>
+      <li><a href="ourproduct.html">Our Product</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
   <div class="wrapper">
-    <!-- Header -->
-    <header>
-      <!-- ✅ Mobile Header -->
-      <div class="mobile-header">
-        <div class="logo">
-          <a href="index.html"><img src="logo.png" alt="Logo" /></a>
-        </div>
-        <div class="hamburger" id="hamburger">&#9776;</div>
-      </div>
+    <section class="page-header">
+      <h2>Our Services</h2>
+    </section>
 
-      <!-- ✅ Mobile Navigation -->
-      <nav class="mobile-nav" id="mobileNav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About-Us</a></li>
-          <li><a href="ourproduct.html">Our-Product</a></li>
-          <li><a href="ourservices.html">Our-Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="faqs.html">FAQ'S</a></li>
-        </ul>
-      </nav>
+    <section class="section">
+      <h3 class="section-subtitle">What We Offer</h3>
+      <p class="section-body">
+        We provide top-quality treated poles suitable for various uses. Our services include:
+      </p>
+      <ul class="features-list">
+        <li>Supply of treated fencing poles</li>
+        <li>Supply of treated electricity poles</li>
+        <li>Delivery services to your location</li>
+        <li>Expert installation support</li>
+      </ul>
+    </section>
 
-      <!-- ✅ Desktop Header and Nav -->
-      <div class="desktop-nav">
-        <div class="header-logo">
-          <img src="logo.png" alt="Intrepids Treated Poles Ltd Logo" />
-        </div>
-        <div class="header-title">Welcome to Intrepids Treated Poles Ltd</div>
-        <div class="header-empty"></div>
-      </div>
-
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About-Us</a>
-        <a href="ourservices.html">Our-Services</a>
-        <a href="ourproduct.html">Our-Product</a>
-        <a href="contact.html">Contact</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="faqs.html">FAQ'S</a>
-      </nav>
-    </header>
-
-    <section>
-      <h2 id="Professional-Fencing-Services-You-Can-Rely-On">Professional Fencing Services You Can Rely On</h2>
-      <div class="features-list">
-        <ul>
-          <li>At Intrepids Treated Poles LTD, we deliver high-quality fencing solutions using durable, pressure-treated wooden poles designed for strength and longevity.</li>
-          <li>Whether you're securing a farm, residential compound, institution, or commercial space, our expert team ensures your fencing is properly installed for maximum protection and value.</li>
-          <li>We offer a range of fencing options to suit various needs and budgets—all backed by reliable delivery and professional installation services.</li>
-        </ul>
-      </div>
-
-      <h3>Chain-Link Fencing</h3>
-      <div class="features-list">
-        <ul>
-          <li>Chain-link fencing is a versatile and widely used option for both residential and commercial spaces.</li>
-          <li>It provides clear visibility, is quick to install, and is relatively low-cost—making it ideal for boundary marking, schools, compounds, and light security applications.</li>
-          <li>Pros: Affordable, durable, low maintenance, and allows visibility.</li>
-          <li>Cons: Offers less privacy, and can be climbed or cut if not reinforced.</li>
-          <li>Chain-link is a great mid-range option for clients who want secure, visible fencing on a budget.</li>
-        </ul>
-      </div>
+    <section class="section">
+      <h3 class="section-subtitle">Electric Fence Services</h3>
+      <p class="section-body">
+        We install high-quality electric fences for security and agricultural needs. We also maintain and repair existing fences.
+      </p>
       <div class="tree-image-gallery">
-        <img src="images/chain1.jpeg" alt="Chain-Link Fencing" />
-        <img src="images/chain2.jpeg" alt="Chain-Link Fencing" />
-      </div>
-
-      <h4>Barbed Wire Fencing</h4>
-      <div class="features-list">
-        <ul>
-          <li>Barbed wire fencing is a classic choice for agricultural and rural settings, particularly for controlling livestock movement. It’s mounted on strong treated poles and designed to act as a deterrent while enclosing large areas cost-effectively.</li>
-          <li>Pros: Very affordable, simple to install, effective for livestock control.</li>
-          <li>Cons: Can be harmful to animals or humans, not visually appealing, and offers limited security for high-risk areas.</li>
-          <li>This is the most economical choice, best for large landowners and farm-based clients focused on function over aesthetics.</li>
-        </ul>
-      </div>
-      <div class="tree-image-gallery">
-        <img src="images/barb1.jpeg" alt="Barbed Wire Fencing" />
-      </div>
-
-      <h5>High-Tension Electric Fencing</h5>
-      <div class="features-list">
-        <ul>
-          <li>High tension electric fencing offers superior security and control, ideal for areas that face frequent intrusions whether from people or wildlife. It’s commonly used in farms, game reserves, and residential estates</li>
-          <li>Pros: Provides maximum security, long-lasting, and requires minimal maintenance. Modern systems can be solar-powered, making them energy-efficient and cheaper to operate over time, especially in off-grid or remote areas.</li>
-          <li>Cons: Higher initial installation cost and requires technical setup.</li>
-          <li>It is the best option for regions affected by wild animals like elephants, offering an active deterrent that protects crops and property. With solar integration, clients reduce energy costs while maintaining reliable 24/7 protection. This is the premium choice for serious security needs.</li>
-        </ul>
-      </div>
-      <div class="image-gallery-3rows">
-        <img src="images/high1.jpeg" alt="High-Tension">
-        <img src="images/high2.jpeg" alt="High-Tension">
-        <img src="images/high3.jpeg" alt="High-Tension">
-        <img src="images/high4.jpeg" alt="High-Tension">
-        <img src="images/high5.jpeg" alt="High-Tension">
-      </div>
-
-      <h6>Fencing Pricing & Delivery</h6>
-      <div class="features-list">
-        <ul>
-          <li>We supply and install all types of fences using our treated wooden poles and quality materials. Below is a general pricing guide:</li>
-        </ul>
-      </div>
-
-      <!-- FENCING OPTIONS TABLE -->
-      <div class="section-title">FENCING OPTIONS</div>
-      <div class="section-body">
-        <div style="overflow-x:auto;">
-          <table>
-            <thead>
-              <tr>
-                <th>Fence Type</th>
-                <th>Price Range</th>
-                <th>Ideal For</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>ChainLink Fencing</td>
-                <td>Sh 300–500<br>Per metre</td>
-                <td>Farms, Ranches, Livestock Enclosure</td>
-              </tr>
-              <tr>
-                <td>Barbed Wire Fencing</td>
-                <td>Sh 150–300<br>Per metre</td>
-                <td>Farms, Homes, Schools, Compounds</td>
-              </tr>
-              <tr>
-                <td>Electric Fencing (High Tension)</td>
-                <td>Sh 700–1200<br>Per metre</td>
-                <td>Wildlife-Prone Areas, Farms, Ranches</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <h6>Note:</h6>
-      <div class="features-list">
-        <ul>
-          <li>Final pricing depends on location, pole spacing, terrain, and other site-specific needs.</li>
-          <li>We offer full delivery and installation anywhere in Kenya.</li>
-        </ul>
-      </div>
-
-      <h6>TRANSPORT SERVICES</h6>
-      <div class="features-list">
-        <ul>
-          <li>At Intrepids Treated Poles LTD, we ensure that your treated wooden poles are delivered promptly, securely, and to any location across Kenya.</li>
-          <li>Whether you're buying poles for fencing, electricity, construction, or telecommunications, our delivery service is built into your order—giving you a complete, stress-free experience from purchase to site.</li>
-        </ul>
-      </div>
-
-      <h6 id="seamless-delivery">Seamless Delivery, Wherever You Are</h6>
-      <div class="features-list">
-        <ul>
-          <li>Once your order is confirmed, our logistics team organizes transportation based on your location, terrain, and quantity.</li>
-          <li>We coordinate closely with you to ensure the poles arrive on time and in perfect condition. We deliver to:</li>
-          <li>Farms and ranches</li>
-          <li>Residential and commercial properties</li>
-          <li>Institutions and government projects</li>
-          <li>Construction and utility sites</li>
-          <li>Our vehicles are equipped to handle both small and bulk loads, with offloading assistance available upon request.</li>
-        </ul>
-      </div>
-
-      <h6>Fair and Flexible Delivery Rates</h6>
-      <div class="features-list">
-        <ul>
-          <li>Delivery charges depend on your distance from our yard, order size, and accessibility of the site. We strive to keep our delivery rates affordable and transparent, with no hidden costs.</li>
-          <li>Local deliveries: Fast turnaround within nearby counties</li>
-          <li>Long-distance deliveries: Scheduled and coordinated in advance.</li>
-          <li>Bulk orders: Special pricing and delivery packages available.</li>
-        </ul>
-      </div>
-
-      <div class="tree-image-gallery">
-        <img src="images/delivery.jpeg" alt="Delivery Service" />
-        <img src="images/delivery2.jpeg" alt="Delivery Service" />
+        <img src="images/high1.jpeg" alt="High-Tension Electric Fence installation in rural area" />
+        <img src="images/high2.jpeg" alt="Electric Fence installation with wooden poles" />
+        <img src="images/high3.jpeg" alt="Completed electric fencing project on farm land" />
       </div>
     </section>
 
-    <footer>
-      <p>© 2025 Intrepids Treated Poles Ltd. All rights reserved.</p>
-    </footer>
+    <section class="section">
+      <h3 class="section-subtitle">Pole Sizes and Pricing</h3>
+      <p class="section-body">Below is a table showing available pole sizes and their respective prices:</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Type</th>
+              <th>Price (KES)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>6ft</td>
+              <td>Fencing Pole</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td>7ft</td>
+              <td>Fencing Pole</td>
+              <td>250</td>
+            </tr>
+            <tr>
+              <td>8ft</td>
+              <td>Fencing Pole</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td>9ft</td>
+              <td>Fencing Pole</td>
+              <td>350</td>
+            </tr>
+            <tr>
+              <td>10ft</td>
+              <td>Electricity Pole</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>12ft</td>
+              <td>Electricity Pole</td>
+              <td>700</td>
+            </tr>
+            <tr>
+              <td>14ft</td>
+              <td>Electricity Pole</td>
+              <td>850</td>
+            </tr>
+            <tr>
+              <td>16ft</td>
+              <td>Electricity Pole</td>
+              <td>1000</td>
+            </tr>
+            <tr>
+              <td>18ft</td>
+              <td>Electricity Pole</td>
+              <td>1200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </div>
 
-  <!-- ✅ JavaScript for Mobile Menu -->
   <script>
     function toggleMobileMenu() {
       const nav = document.getElementById("mobileNav");
-      nav.classList.toggle("active");
+      nav.style.display = nav.style.display === "block" ? "none" : "block";
     }
-
-    document.getElementById("hamburger").addEventListener("click", toggleMobileMenu);
   </script>
 </body>
 </html>
