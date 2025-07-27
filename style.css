@@ -82,13 +82,6 @@ nav a:hover {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  body {
-    padding-top: 120px; /* reduce vertical space under fixed header */
-  }
-
-  header {
-    padding: 10px 15px; /* tighter padding */
-  }
 
    .header-logo img {
     height: 50px;
@@ -135,74 +128,6 @@ nav a:hover {
   .nav-links li {
     margin: 10px 0;
   }
-
-  .hero h1 {
-    font-size: 24px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .product {
-    width: 100%;
-  }
-
-  .service {
-    width: 100%;
-  }
-
-  .contact-info,
-  .contact-form {
-    width: 100%;
-  }
-
-  .contact {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact form {
-    width: 90%;
-  }
-
-  .about-container {
-    padding: 20px;
-  }
-
-  .about-container h2 {
-    font-size: 22px;
-  }
-
-  .about-container p {
-    font-size: 14px;
-  }
-
-  .product-item {
-    width: 100%;
-  }
-
-  .faq {
-    padding: 10px;
-  }
-
-  .faq-item h3 {
-    font-size: 16px;
-  }
-
-  .faq-item p {
-    font-size: 14px;
-  }
-
-  .wrapper {
-    padding: 10px;
-  }
-
-  .wrapper h1,
-  .wrapper h2 {
-    font-size: 20px;
-  }
-}
 /* ===== Carousel ===== */
 .carousel-item img {
   width: 100%;
