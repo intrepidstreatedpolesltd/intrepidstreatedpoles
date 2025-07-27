@@ -956,3 +956,73 @@ th {
 .section-subtitle {
   margin-top: 10px !important;  /* Reduce distance before next subtitle */
 }
+/* === Mobile Hamburger Styles === */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+}
+
+.mobile-nav {
+  display: none;
+  background-color: #0a4d00;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav li {
+  border-bottom: 1px solid #ffffff33;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  background-color: #086000;
+}
+
+.mobile-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #0a4d00;
+}
+
+.mobile-header .logo img {
+  width: 25%;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .mobile-nav.active {
+    display: block;
+  }
+
+  /* Hide desktop nav */
+  nav:not(.mobile-nav) {
+    display: none;
+  }
+
+  .header-content {
+    display: none;
+  }
+}
