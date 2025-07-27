@@ -885,14 +885,17 @@ th {
   #contact form {
     padding: 0 10px;
   }
+}
 
   #contact input,
   #contact textarea {
-    font-size: 14px;z
+    font-size: 14px;
   }
 
   #contact .btn {
     font-size: 14px;
     padding: 8px 16px;
   }
-}
+  #contact .loading-spinner {
+    margin-top: 15px;
+  }
