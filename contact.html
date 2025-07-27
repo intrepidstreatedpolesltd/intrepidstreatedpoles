@@ -135,5 +135,14 @@
       }, 500);
     });
   </script>
+  <script>
+  function toggleMobileMenu() {
+    const nav = document.getElementById("mobileNav");
+    nav.classList.toggle("active");
+  }
+
+  document.getElementById("hamburger").addEventListener("click", toggleMobileMenu);
+</script>
+
 </body>
 </html>
