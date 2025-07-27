@@ -969,7 +969,6 @@ th {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #green;
   }
 
   .mobile-header .logo img {
@@ -983,7 +982,6 @@ th {
 
   .mobile-nav {
     display: none;
-    background-color: #green;
     padding: 10px 0;
   }
 
