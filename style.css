@@ -9,42 +9,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  line-height: 1.0;
-  padding-top: 90px; /* Default padding for desktop header */
-}
-
-/* === Responsive Header Padding Fix === */
-@media (max-width: 768px) {
-  body {
-    padding-top: 70px; /* Adjust based on actual mobile-header height */
-  }
-
-  .header-content {
-    display: none;
-  }
-
-  .mobile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    height: 60px; /* Fixed height for spacing */
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .logo img {
-    max-width: 25%;
-  }
+  line-height: 1.6;
+  padding-top: 160px; /* Leaves space for sticky header on desktop */
 }
 
 /* === Optional Wrapper === */
@@ -61,7 +27,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -82,6 +48,7 @@ nav a.active {
   color: #ffee58;
 }
 
+/* === Hamburger Menu === */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -95,12 +62,13 @@ nav a.active {
   background-color: white;
 }
 
+/* === Mobile Nav Dropdown === */
 .mobile-nav {
   display: none;
   flex-direction: column;
   background-color: #008000;
   position: absolute;
-  top: 60px;
+  top: 70px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -113,6 +81,27 @@ nav a.active {
 .mobile-nav a {
   padding: 10px 15px;
   border-top: 1px solid #ffffff33;
+}
+
+/* === Mobile Styling === */
+@media (max-width: 768px) {
+  body {
+    padding-top: 100px; /* Adjusted for smaller header on mobile */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo img {
+    max-width: 25%;
+  }
 }
 
 /* === Section Styling === */
