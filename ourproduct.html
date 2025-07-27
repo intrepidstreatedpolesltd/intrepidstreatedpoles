@@ -8,38 +8,15 @@
 </head>
 <body>
 
-<!-- Wrapper Start -->
-<div class="wrapper">
-
-  <!-- Header -->
-  <header>
-    <!-- ✅ Mobile Hamburger Header -->
-    <div class="mobile-header">
-      <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="Logo" /></a>
-      </div>
-<button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+<!-- Header -->
+<header>
+  <div class="header-content">
+    <div class="header-logo">
+      <img src="logo.png" alt="Logo" />
     </div>
-
-    <!-- ✅ Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About-Us</a></li>
-        <li><a href="ourproduct.html">Our-Product</a></li>
-        <li><a href="ourservices.html">Our-Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="faqs.html">FAQ'S</a></li>
-      </ul>
-    </nav>
-
-   <nav class="desktop-nav">
-  <div class="header-logo">
-    <img src="logo.png" alt="Intrepids Treated Poles Ltd Logo" />
+    <div class="header-title">Welcome to Intrepids Treated Poles Ltd</div>
   </div>
-  <div class="header-title">Welcome to Intrepids Treated Poles Ltd</div>
-  <div class="desktop-links">
+  <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About-Us</a>
     <a href="ourservices.html">Our-Services</a>
@@ -47,9 +24,8 @@
     <a href="contact.html">Contact</a>
     <a href="gallery.html">Gallery</a>
     <a href="faqs.html">FAQ'S</a>
-  </div>
-</nav>
-  </header>
+  </nav>
+</header>
 
 <!-- ✅ ORIGINAL BODY CONTENT (UNTOUCHED) -->
 <section id="fencing-poles">
@@ -158,29 +134,10 @@
     <img src="images/delivery.jpeg" alt="Delivery Service">
   </div>
 </section>
+
 <footer>
   <p>&copy; 2025 Intrepids Treated Poles Ltd. All rights reserved.</p>
 </footer>
 
-</div>
-<!-- Wrapper End -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const mobileNav = document.getElementById("mobileNav");
-
-    // Toggle mobile menu on hamburger click
-    hamburger.addEventListener("click", function () {
-      mobileNav.classList.toggle("active");
-    });
-
-    // Close mobile menu when any link is clicked
-    document.querySelectorAll('#mobileNav a').forEach(function (link) {
-      link.addEventListener("click", function () {
-        mobileNav.classList.remove("active");
-      });
-    });
-  });
-</script>
 </body>
 </html>
