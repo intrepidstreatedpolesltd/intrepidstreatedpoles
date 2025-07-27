@@ -82,19 +82,8 @@ nav a:hover {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-
-   .header-logo img {
-    height: 50px;
-    max-width: 120px;
-  }
-}
-
-   .header-title {
-    font-size: 16px;
-    text-align: center;
-    margin-top: 5px;
-    padding: 0 10px;
-    line-height: 1.2;
+  body {
+    padding-top: 140px;
   }
 
   .header-content {
@@ -102,7 +91,20 @@ nav a:hover {
     align-items: center;
     gap: 5px;
   }
-}
+
+  .header-title {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5px;
+    padding: 0 10px;
+    line-height: 1.2;
+  }
+
+  .header-logo img {
+    height: 50px;
+    max-width: 100px;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -112,7 +114,7 @@ nav a:hover {
     flex-direction: column;
     position: absolute;
     background-color: #357a38;
-    top: 100px; /* adjust based on reduced header height */
+    top: 100px;
     right: 15px;
     width: 180px;
     padding: 15px;
@@ -128,6 +130,45 @@ nav a:hover {
   .nav-links li {
     margin: 10px 0;
   }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .carousel-item img {
+    height: 50vh;
+  }
+
+  .carousel-caption h2 {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    padding: 15px;
+  }
+
+  .section-body {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .read-more-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .image img,
+  .image-gallery-3rows img {
+    width: 90%;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+}
 /* ===== Carousel ===== */
 .carousel-item img {
   width: 100%;
