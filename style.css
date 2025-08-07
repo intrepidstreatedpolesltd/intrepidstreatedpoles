@@ -181,15 +181,15 @@ body {
     padding: 8px 16px;
   }
 
-  .image img,
   .image-gallery-3rows img {
-    width: 60%;
+    width: 30%;
+    max-width: 33.33%;
   }
 
   table, th, td {
     font-size: 14px;
   }
-}
+
 /* ===== Carousel ===== */
 .carousel-item img {
   width: 100%;
@@ -268,11 +268,11 @@ body {
   object-fit: cover;
 }
 
-.image,
 .image-gallery-3rows {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 10px;
 }
 
 /* ===== Tables ===== */
@@ -364,10 +364,10 @@ footer {
   }
 
   .image img,
-  .image-gallery-3rows img {
-    width: 60%;
+   .image-gallery-3rows img {
+    width: 30%;
+    max-width: 33.33%;
   }
-
   table, th, td {
     font-size: 14px;
   }
@@ -406,13 +406,12 @@ h4, h5, h6 {
 }
 
 .image img,
-.image-gallery-3rows img {
-  width: 30%;
-  height: auto;
-  border-radius: 5px;
-  object-fit: cover;
+.image-gallery-3rows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
-
 /* Table Styling */
 table {
   width: 100%;
@@ -451,14 +450,15 @@ thead {
 /* Mobile Support */
 @media (max-width: 768px) {
   .image img,
-  .image-gallery-3rows img {
-    width: 90%;
+.image-gallery-3rows img {
+    width: 30%;
+    max-width: 33.33%;
   }
-
   table, th, td {
     font-size: 14px;
   }
 }
+
 /* ===== About Page Specific Styles ===== */
 .section-subtitle {
   background-color: white;
@@ -647,8 +647,9 @@ thead {
 
 /* Mobile fix for image gallery on small screens */
 @media (max-width: 768px) {
-  .image-gallery img {
-    width: 90%;
+ .image-gallery-3rows img {
+    width: 30%;
+    max-width: 33.33%;
   }
 }
 /* ===== FAQ PAGE STYLES ===== */
@@ -1029,4 +1030,5 @@ th {
   #contact .loading-spinner {
     margin-top: 15px;
   }
+
 
