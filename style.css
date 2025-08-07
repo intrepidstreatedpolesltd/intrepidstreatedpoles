@@ -79,30 +79,6 @@ nav a:hover {
   right: 20px;
   z-index: 1001;
 }
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.completed-projects {
-  margin-top: 20px; /* Reduce this as needed */
-  padding-top: 20px; /* Optional - adjust spacing */
-}
-.project-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.project-gallery img {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px;
-}
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -1049,3 +1025,4 @@ body {
   margin: 0;
   padding: 0;
 }
+
