@@ -1026,3 +1026,26 @@ th {
     margin-top: 15px;
   }
 
+
+
+/* === Responsive 3-in-a-row gallery === */
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+}
+
+.project-gallery img {
+  flex: 1 1 calc(33.33% - 10px);
+  max-width: calc(33.33% - 10px);
+  height: auto;
+  border-radius: 4px;
+}
+
+/* === Reset body padding and margin === */
+body {
+  margin: 0;
+  padding: 0;
+}
