@@ -344,6 +344,15 @@ thead {
   border-radius: 5px;
   object-fit: cover;
 }
+/* Override section padding for About Us page (desktop) */
+.about-page section {
+  padding: 20px 20px 30px; /* Matches mobile-like tighter spacing */
+}
+
+.about-page main {
+  padding-top: 60px; /* Keep header offset */
+}
+
 
 /* === OUR PRODUCT PAGE SUPPORT STYLES (FIXED for 3 horizontal images) === */
 
@@ -921,6 +930,7 @@ about-page main {
     margin-top: 3px;
     margin-bottom: 3px;
   }
+
 
 
 
