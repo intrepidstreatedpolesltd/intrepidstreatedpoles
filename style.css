@@ -17,7 +17,7 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  padding-top: 120px; /* Matches header height */
+  padding-top: 120px; /* Matches header height for all pages */
 }
 
 /* ===== Viewport Meta (Add to <head> of your HTML) ===== */
@@ -32,6 +32,11 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+}
+/* ===== Hide Header on Scroll ===== */
+header.hide {
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
 }
 
 .header-content {
@@ -930,6 +935,7 @@ about-page main {
     margin-top: 3px;
     margin-bottom: 3px;
   }
+
 
 
 
