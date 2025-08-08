@@ -301,6 +301,32 @@ thead {
   color: #2e7d32;
   margin-bottom: 10px;
 }
+/* ===== Tighten About Page Layout ===== */
+.about-page {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reduce space below sticky header */
+.about-page main {
+  padding-top: 60px; /* Adjust to be just enough for your fixed header height */
+}
+
+/* Reduce extra section spacing */
+.about-page section {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Tighten heading spacing */
+.about-page h1,
+.about-page h2,
+.about-page h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 /* ===== ABOUT PAGE IMAGE FIX ===== */
 .about-page .tree-image-gallery,
@@ -878,6 +904,23 @@ img {
   height: auto;
   display: block;
 }
+about-page main {
+    padding-top: 50px; /* slightly less for mobile header */
+  }
+
+  .about-page section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .about-page h1,
+  .about-page h2,
+  .about-page h3 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
 
 
 
