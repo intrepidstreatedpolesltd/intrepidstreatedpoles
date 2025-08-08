@@ -159,24 +159,6 @@ nav a:hover {
   background-color: #256428;
 }
 
-/* ===== Shared Image Styles ===== */
-.gallery-img,
-.image img,
-.image-gallery-3rows img,
-.image-gallery img,
-.tree-image-gallery img,
-.stump-gallery img,
-.left-column img,
-.right-column img,
-.completed-projects-images img,
-.ongoing-projects-images img {
-  width: 30%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px;
-  margin: 10px;
-  display: block;
-}
 
 /* ===== Footer ===== */
 footer {
@@ -320,22 +302,22 @@ thead {
   margin-bottom: 10px;
 }
 
-/* Desktop */
-.tree-image-gallery,
-.stump-gallery {
+/* ===== ABOUT PAGE IMAGE FIX ===== */
+.about-page .tree-image-gallery,
+.about-page .stump-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 10px; /* space between images */
+  justify-content: center; /* center all images */
 }
 
-.tree-image-gallery img,
-.stump-gallery img {
-  width: 32%;
+.about-page .tree-image-gallery img,
+.about-page .stump-gallery img {
+  flex: 1 1 calc(33.333% - 10px); /* 3 per row desktop */
+  max-width: calc(33.333% - 10px);
   border-radius: 5px;
   object-fit: cover;
 }
-
 
 /* === OUR PRODUCT PAGE SUPPORT STYLES (FIXED for 3 horizontal images) === */
 
@@ -804,10 +786,11 @@ th {
 }
 
  /* Mobile: Keep 3 per row in About page galleries */
-.tree-image-gallery img,
-.stump-gallery img {
-  width: 32% !important;
-}
+  .about-page .tree-image-gallery img,
+  .about-page .stump-gallery img {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
   .completed-projects-images img,
   .ongoing-projects-images img {
     width: 60%;
@@ -895,6 +878,7 @@ img {
   height: auto;
   display: block;
 }
+
 
 
 
