@@ -408,6 +408,18 @@ thead {
   border-radius: 5px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
+
+/* === ABOUT PAGE IMAGE LAYOUT FIX === */
+/* Desktop: 3 in a row */
+.tree-image-gallery img,
+.stump-gallery img,
+.left-column img,
+.right-column img {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+}
 /* === OUR PRODUCT PAGE SUPPORT STYLES (FIXED for 3 horizontal images) === */
 
 .image-gallery {
@@ -896,18 +908,21 @@ th {
   .image-gallery img {
     width: 90%;
   }
+  /* Mobile: 2 per row */
 .gallery-img,
   .image img,
   .image-gallery-3rows img,
-  .tree-image-gallery img,
+   .tree-image-gallery img,
   .stump-gallery img,
   .left-column img,
-  .right-column img,
+  .right-column img {
+    width: 48%;
+    max-width: none;
   .completed-projects-images img,
   .ongoing-projects-images img {
-    width: 90%;
+    width: 60%;
     max-width: 100%;
-      /* shared styles here */
+  }
   }
 /* ===== Tables ===== */
 table {
@@ -943,12 +958,12 @@ thead {
     font-size: 20px;
   }
 }
-  .tree-image-gallery img,
+   .tree-image-gallery img,
   .stump-gallery img,
   .left-column img,
   .right-column img {
-    width: 90%;
-    max-width: 100%;
+    width: 48%;
+    max-width: none;
   }
 
   .machinery-container {
@@ -969,6 +984,7 @@ thead {
   .completed-projects-images img,
   .ongoing-projects-images img {
     width: 90%;
+   max-width: 100%;
   }
 
   #contact h2 {
@@ -997,4 +1013,5 @@ img {
   height: auto;
   display: block;
 }
+
 
