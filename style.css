@@ -930,7 +930,24 @@ about-page main {
     margin-top: 3px;
     margin-bottom: 3px;
   }
+/* Gallery container */
+.completed-projects-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    gap: 20px; /* Space between images */
+    justify-items: center; /* Center images */
+    max-width: 900px;
+    margin: 0 auto;
+}
 
+/* Gallery images */
+.completed-projects-images img {
+    width: 300px;      /* Reduce image size */
+    height: 200px;
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
 
 
